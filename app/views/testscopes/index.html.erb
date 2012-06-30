@@ -1,0 +1,58 @@
+<% title "Test Scope" %>
+
+
+<div class="testscope_form">
+  <%=form_tag "/testscopes", :id => "testscope_search_form" do -%>
+    <%=label_tag :category, "START"%>
+    <%=select_tag :category, options_for_select(Category.all.collect {|c|[c.name, c.id]}), :prompt => "- category -" %>
+    <%=label_tag :environment, "ON"%>
+    <%=select_tag :environment, options_for_select(Environment.all.collect {|e|[e.name, e.id]}), :prompt => "- environment -" %>
+     <%=label_tag :browser, "WITH"%>
+    <%=select_tag :browser, options_for_select(Browser.all.collect {|b|[b.name, b.id]}), :prompt => "- browser -" %>
+    <%=submit_tag "submit"%>
+  <%- end -%>
+</div>
+
+<div style="float: right; height: 20px; margin-bottom: 5px;">
+	
+	<%=form_tag search_testscopes_path, :id => "search_form", :method => "get" do -%>
+	  <%=label_tag "created", "Date:"%>
+	  <%=text_field_tag "created", @date.to_formatted_s(:datepicker), :style => "width:100px;height: 12px;", :readonly => true%>
+	<%- end -%>
+</div>
+
+<section class="one_col">
+
+<div class="envarea">
+  <%=label "env", "all"%>	
+  <%=radio_button_tag "env", "all", true %>
+  <%- Environment.all.each do |e| -%>
+    <%=label "env", e.name %>
+    <%=radio_button_tag "env", e.name, false%>
+  <%- end -%>
+</div>
+
+<div>
+  <ul class="sections">
+  	<%- @testscopes.each do |testscope| -%>
+	  <li class="section" name="<%=testscope.environment.name%>">
+      <div class="item item_progress">
+      	<%= link_to testscope, :style => "float: left" do -%>
+      	  <h4 style="width:140px"><%= testscope.environment.name%>(<%= testscope.ver%>)</h4>
+      	  <h4 style="width:450px"><%=testscope.browser.name.capitalize%> | <%= testscope.name %> <%= testscope.created.to_formatted_s(:hour_and_min)%></h4>
+      	  <%- if testscope.testJobs.where(:status => "fail").count > 0-%>
+      	  <h4 style="color: red">Failure <%= testscope.testJobs.where(:status => "fail").count%></h4>
+      	  <%- end -%>
+      	<%- end -%>
+      	<%= combo_progress_bar progress_bar_value(testscope), :rounded => true %> 
+      	<div class="status">
+          <small class="normal">          	
+          	<%=status_btn testscope%>
+          </small>
+      	</div>
+      </div>
+  	</li>	
+	<%- end -%>
+  </ul>	
+</div>
+</section>

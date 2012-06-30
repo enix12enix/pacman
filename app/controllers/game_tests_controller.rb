@@ -1,0 +1,2 @@
+class GameTestsController < ApplicationController
+end

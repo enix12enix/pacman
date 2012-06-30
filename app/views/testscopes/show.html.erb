@@ -1,0 +1,35 @@
+<section class="one_col">
+	
+<div class="toparea">
+  <%=label "testjob", "all"%>	
+  <%=radio_button_tag "testjob", "all", true %>
+  <%=label "testjob", "fail"%>	
+  <%=radio_button_tag "testjob", "fail", false %>
+  <%=label "testjob", "pass"%>	
+  <%=radio_button_tag "testjob", "pass", false %>
+</div>
+	
+<div>
+  
+  <ul class="sections">
+  	
+  	<%- @testscope.testJobs.each do |job| -%>
+  	  
+	  <li class="section item_testjob" id="<%=job.id%>">
+	  	<div class="item item_progress">
+          <%=to_test_job job%>
+          <div class="status">
+            <%= watch_me_btn job%>
+            <%= check_me_btn job %>
+      	  </div>
+      	</div>
+      	<%- if job.status == "fail" or job.checked -%>
+          <div class="message ui-corner-all">
+          	<p><%=job.message%></p>
+          </div>
+        <%- end -%>
+  	  </li>	
+	<%- end -%>
+  </ul>	
+</div>
+</section>

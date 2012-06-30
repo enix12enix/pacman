@@ -1,0 +1,11 @@
+<%- @result.each do |env, sts| -%>
+  <div>
+    <div id="<%=env%>_pie_chart_div" class="piechart"></div>
+    <div id="<%=env%>_line_chart_div" class="linechart"></div>
+  </div>
+  <%=render :partial => "home/piechart", :locals => {:env => env, :latest_ver => sts["latest_ver"]}%>
+  <%=render :partial => "home/linechart", :locals => {:env => env, :pass_rate => sts["pass_rate"]}%>
+<%- end -%>
+
+
+

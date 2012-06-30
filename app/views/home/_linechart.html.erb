@@ -1,0 +1,24 @@
+<%= javascript_tag do -%>
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+      	var data = new google.visualization.DataTable();
+      	data.addColumn('string', 'Build');
+        data.addColumn('number', 'Pass Rate');
+        var dr = new Array();
+        <%- pass_rate.each do |p| -%>
+          dr.push(['<%=p[1]%>', <%=p[0]%>]);
+        <%- end -%>
+        data.addRows(dr);
+
+        var options = {
+          title: 'Latest 10 Build <%=env%> Test Status',
+          vAxis: {format:'#,###%', maxValue:1, minValue:0},
+          pointSize: 3,
+         
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById("<%=env%>_line_chart_div"));
+        chart.draw(data, options);
+      }
+<%- end -%>

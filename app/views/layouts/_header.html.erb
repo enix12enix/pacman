@@ -1,0 +1,24 @@
+<div id="header_container">
+  <div class="logo">
+  	<h1>
+  	  <%=link_to "Pacman", root_path%>
+  	</h1>
+  </div>
+  <nav>
+  	<ul>
+  	 
+  	  <%- if user_signed_in? -%>
+  	    <li class="nav_item"><%= link_to "Dashboard", testscopes_path %></li>
+  	    <%- if admin?(current_user) -%>
+  	      <li class="nav_item"><%= link_to "Configuration", configuration_path %></li>
+  	    <%- end -%>
+  	    <li><%= link_to "Account", edit_user_registration_path, :class => "sign_in" %></li>
+  	    <li><%= link_to "Sign out", destroy_user_session_path, :method => :delete, :class => "sign_out" %></li>
+  	  <%- else -%>
+  	    <li><%= link_to "Sign In",new_user_session_path, :class => "sign_in" %></li>
+  	    <li><%= link_to "Create Account", new_user_registration_path, :class => "sign_up" %></li>
+  	  <%- end -%>
+  	 
+  	</ul>
+  </nav>
+</div>

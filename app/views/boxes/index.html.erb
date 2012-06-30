@@ -1,0 +1,39 @@
+<% title "Test Box"%>
+
+<section class="two_col">
+  
+  <div>
+  	<ul class="sections">
+  	  <%- @boxes.each do |b| -%>
+        <li class="section" id="<%=b.id%>" style="margin-bottom: 10px;">
+	      <div class="item">
+          	<h3><%=b.ip%></h3>  	
+          	<div class="status">
+          	  <small class= "inactive" >
+          	    <%= link_to "Edit", edit_box_path(b), :remote => true%>
+          	  </small>
+              <small class= "inactive" >
+          	    <%= link_to "Delete", b, :method => :delete, :remote => true, :confirm => "Are you sure?" %>
+          	  </small>
+          	  <%- if b.active -%>
+          	    <small class="active"><%= link_to "Active", "#"%></small>
+          	  <%- else -%>
+          	    <small class="inactive"><%= link_to "Active", "#"%></small>
+          	  <%- end -%>
+            </div>
+          </div>
+        </li>
+  	  <%- end -%>
+  	</ul>
+  </div>
+  
+  <div>
+  	<div id="sidebar">
+  	  <div>
+  	  	<h3 class="divider">Actions</h3>
+  	  	<p><%= link_to "Add New Box", new_box_path, :remote => true%></p>
+  	  </div>
+  	</div>
+  </div>
+	
+</section>

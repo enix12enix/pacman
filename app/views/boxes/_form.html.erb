@@ -1,0 +1,16 @@
+<%= form_for @box do |f| %>
+	  <fieldset>
+	  	<table>
+	  	  <tbody>
+	  	  	<tr>
+	  	  	  <td><%= f.label :ip %></td>
+	  	  	  <td><%= f.text_field :ip, :class => "text ui-widget-content ui-corner-all" %></td>
+	  	  	</tr>
+	  	    <tr>
+	  	  	  <td><%= f.label :active %></td>
+	  	  	  <td><%= f.check_box :active, :class => "text ui-widget-content ui-corner-all" %></td>
+	  	    </tr>
+	  	  </tbody>	
+	  	</table>  
+	 </fieldset>
+<% end %>

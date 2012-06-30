@@ -1,0 +1,51 @@
+<div>
+  <div class="user_sign_in">
+  	<h2>Sign in with EA account</h2>
+  	  <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+        <table>
+          <tbody>
+          	<tr>
+          	  <td>
+          	    <%= f.label :email %>
+          	  </td>
+          	  <td>
+          	    <%= f.email_field :email %>
+          	  </td>
+          	</tr>
+            <tr>
+          	  <td>
+          	    <%= f.label :password %>
+          	  </td>
+          	  <td>
+          	    <%= f.password_field :password %>
+          	  </td>
+          	</tr>
+          	<% if devise_mapping.rememberable? -%>
+          	  <tr>
+          	  	<td><%= f.label :remember_me %></td>
+          	  	<td><%= f.check_box :remember_me %></td>
+          	  </tr>
+          	<% end -%>
+          	    
+          	<tr/>
+            <tr>
+              <td/>
+          	  <td class="action">
+          	    <%= f.submit "Sign In" %>
+          	  </td>
+          	</tr>
+          </tbody>
+        </table>
+
+        
+
+
+        <ul id="devise_links">
+          <%= render "links" %>
+        </ul>
+      <% end %>
+
+
+  </div>
+ 
+</div>

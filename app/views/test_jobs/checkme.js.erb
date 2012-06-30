@@ -1,0 +1,3 @@
+$("#<%=@job.id%> h4").removeClass().addClass("<%=@job.status%>")
+$("#<%=@job.id%> div.status").remove()
+$("#<%=@job.id%> h4").html("<%= escape_javascript(to_test_job(@job))%>")

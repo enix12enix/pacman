@@ -1,0 +1,12 @@
+<%- if controller_name != 'sessions' %>
+  <%= content_tag :li do -%>
+    <%= link_to "Sign in", new_session_path(resource_name) %>
+  <% end -%>
+<% end -%>
+
+<%- if devise_mapping.registerable? && controller_name != 'registrations' %>
+  <%= content_tag :li do -%>
+    <%= link_to "Sign up", new_registration_path(resource_name) %><br />
+  <% end -%>
+<% end -%>
+

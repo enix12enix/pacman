@@ -1,0 +1,45 @@
+<% title "Test Script" %>
+
+
+<section class="two_col">
+  
+  <div>
+  	<%- unless @testscripts.nil? -%>
+  	<ul class="sections">
+  	  <%- @testscripts.each do |t| -%>
+        <li class="section" id="<%=t.id%>" style="margin-bottom: 10px;">
+	      <div class="item">
+          	<h3><%=t.name%></h3>  	
+          	<div class="status">
+          	  <small class= "inactive" >
+          	    <%= link_to "Edit", edit_test_script_path(t), :remote => true%>
+          	  </small>
+              <small class= "inactive" >
+          	    <%= link_to "Delete", t, :method => :delete, :remote => true, :confirm => "Are you sure?" %>
+          	  </small>
+          	  <%- if t.active -%>
+          	    <small class="active"><%= link_to "Active", "#"%></small>
+          	  <%- else -%>
+          	    <small class="inactive">Inactive</small>
+          	  <%- end -%>
+            </div>
+          </div>
+        </li>
+  	  <%- end -%>
+  	</ul>
+  	<%- end -%>
+  </div>
+  
+  <div>
+  	<div id="sidebar">
+  	  <div>
+  	  	<h3 class="divider">Category</h3>
+  	  	<%- categories.each do |category| -%>
+  	  	  <p><%=link_to category.name, :controller => "testScripts", :action => "by_category", :id => category.id %></p>
+  	  	<%- end -%>
+  	  </div>
+  	</div>
+  </div>
+	
+</section>
+

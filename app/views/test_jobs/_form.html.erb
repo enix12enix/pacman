@@ -1,0 +1,17 @@
+<%= form_for @job, :url => createwatchme_path do |f| %>
+      <%=f.hidden_field :id, :value => @job.id%>
+	  <fieldset>
+	  	<table>
+	  	  <tbody>
+	  	  	<tr>
+	  	  	  <%=label_tag "Please ask Pogo QA Engineer to get the account"%>
+	  	  	  <p/>
+	  	  	</tr>
+	  	    <tr>
+	  	  	  <td><%= f.label :testbox %></td>
+	  	  	  <td><%= f.collection_select :testbox, Box.where(:active => true), :id, :ip, :class => "text ui-widget-content ui-corner-all"%></td>
+	  	    </tr>
+	  	  </tbody>	
+	  	</table>  
+	 </fieldset>
+<% end %>

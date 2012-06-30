@@ -1,0 +1,2 @@
+$('#<%= @account.id %>').fadeOut().remove();
+$('#flash').show().html('<div id="flash_notice"><%= escape_javascript(flash[:notice])%></div>')

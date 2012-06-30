@@ -1,0 +1,2 @@
+module GameTestsHelper
+end

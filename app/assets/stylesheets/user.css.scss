@@ -1,0 +1,59 @@
+div.user_new, div.user_sign_in {
+    background: none repeat scroll 0 0 white;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 0 0 10px #DDDDDD;
+    margin: 20px auto;
+    padding: 20px;
+    width: 450px;
+}
+
+div.user_new tr:last-child td, div.user_sign_in tr:last-child td {
+    padding-bottom: 0;
+}
+
+div.user_new td, div.user_sign_in td {
+    padding-bottom: 15px;
+}
+
+div.user_new #devise_links, div.user_sign_in #devise_links {
+    list-style: none outside none;
+}
+
+div.user_new #devise_links li, div.user_sign_in #devise_links li {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+div.user_new form, div.user_sign_in form {
+    margin: 0;
+}
+
+div.user_new table, div.user_sign_in table {
+    margin-bottom: 40px;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+a {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+// #content > #flash {
+  // display: none
+// }
+
+

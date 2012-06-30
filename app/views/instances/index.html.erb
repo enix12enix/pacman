@@ -1,0 +1,30 @@
+<% title "Test Instance"%>
+
+<section class="two_col">
+  
+  <div>
+  	<ul class="sections">
+  	  <%- @instances.each do |b| -%>
+        <li class="section" id="<%=b.id%>" style="margin-bottom: 10px;">
+	      <div class="item">
+          	<h3><%=b.ip%></h3>
+          	<%= last_24_hours_pass_rate b %>
+            <div class="status">
+          	  <%= active_button b %>
+            </div>
+          </div>
+        </li>
+  	  <%- end -%>
+  	</ul>
+  </div>
+  
+  <div>
+  	<div id="sidebar">
+  	  <div>
+  	  	<h3 class="divider">Actions</h3>
+  	  	<p><%= link_to "Add New Instance", new_instance_path, :remote => true%></p>
+  	  </div>
+  	</div>
+  </div>
+	
+</section>

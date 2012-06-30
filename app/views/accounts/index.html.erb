@@ -1,0 +1,47 @@
+<% title "Test Account" %>
+
+<section class="two_col">
+  
+  <div>
+  	<%- unless @accounts.nil? -%>
+  	<ul class="sections">
+  	  <%- @accounts.each do |a| -%>
+        <li class="section" id="<%=a.id%>" style="margin-bottom: 10px;">
+	      <div class="item">
+          	<h3><%=a.username%></h3>  	
+          	<div class="status">
+          	  <small class= "normal" >
+          	    <%= link_to "Edit", edit_account_path(a), :remote => true%>
+          	  </small>
+              <small class= "normal" >
+          	    <%= link_to "Delete", a, :method => :delete, :remote => true, :confirm => "Are you sure?" %>
+          	  </small>
+          	  <%- if a.active -%>
+          	    <small class="active"><%= link_to "Active", "#"%></small>
+          	  <%- else -%>
+          	    <small class="inactive"><%= link_to "Active", "#"%></small>
+          	  <%- end -%>
+            </div>
+          </div>
+        </li>
+  	  <%- end -%>
+  	</ul>
+  	<%- end -%>
+  </div>
+  
+  <div>
+  	<div id="sidebar">
+  	  <div>
+  	  	<h3 class="divider">Environment</h3>
+  	  	<%- environments.each do |environment| -%>
+  	  	  <p><%=link_to environment.name, :controller => "accounts", :action => "by_environment", :id => environment.id %></p>
+  	  	<%- end -%>
+  	  </div>
+  	  <div>
+  	  	<h3 class="divider">Actions</h3>
+  	  	<p><%=link_to "Add New Test Account", new_account_path, :remote => true %></p>
+  	  </div>
+  	</div>
+  </div>
+	
+</section>

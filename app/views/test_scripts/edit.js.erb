@@ -1,0 +1,17 @@
+$("#edit-form").dialog({
+  autoOpen: true,
+  height: 400,
+  width: 400,
+  modal: true,
+  title: "<%=title%>",
+  buttons: {
+    OK: function() { $("#edit-form form").submit()},
+    Close: function() { $( this ).dialog( "close" );}
+  },
+  open: function() {
+    $("#edit-form").html("<%= escape_javascript(render(@testscript._type.to_s.downcase + 'form')) %>")
+  },
+});
+
+
+

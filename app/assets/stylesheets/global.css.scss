@@ -1,0 +1,576 @@
+@font-face {
+  font-family: 'Lobster';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Lobster'), url('http://themes.googleusercontent.com/static/fonts/lobster/v5/NIaFDq6p6eLpSvtV2DTNDQLUuEpTyoUstqEm5AMlJo4.woff') format('woff');
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    color: gray;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 20px;
+}
+
+html, body {
+    background-color: white;
+}
+
+#footer {
+    clear: both;
+    color: #999999;
+    padding-top: 60px;
+}
+
+footer {
+    margin-top: 19px;
+    padding-top: 19px;
+}
+
+#footer > div {
+    border-top: 1px solid #EEEEEE;
+    padding: 30px 0;
+}
+
+#footer * {
+    font-weight: normal;
+}
+
+#footer ul {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+#footer li {
+    display: inline;
+    list-style: none outside none;
+    margin: 0 5px;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {
+    display: block;
+}
+
+a:hover {
+  color: #00438A;
+  text-decoration: underline;
+}
+
+
+
+input[type="radio"] {
+    -webkit-appearance: checkbox;
+    -moz-appearance: checkbox;
+    -ms-appearance: checkbox;     
+    -o-appearance: checkbox;
+}
+
+#header {
+  background: url("header_noise.png") repeat scroll left bottom black;
+  border-bottom: 1px solid #FFFFFF;
+  border-top: 1px solid #111111;
+  box-shadow: 0 0 20px #DDDDDD;
+  font-size: 0.92em;
+  height: 55px;
+  margin-bottom: 20px;
+  position: relative;
+  text-shadow: 1px 2px 0 #111111;
+}
+
+#header .logo {
+    float: left;
+}
+
+body #container > div, body #header > div, body #footer > div, body #notice {
+    clear: both;
+    margin: 0 auto;
+    position: relative;
+    width: 988px;
+}
+
+#header h1 {
+    font-size: 1.55em;
+    margin: 0;
+    padding: 10px 0;
+}
+
+h1 {
+    font-size: 30px;
+    line-height: 40px;
+    margin-bottom: 20px;
+}
+
+h1, h2, h3 {
+    color: #454545;
+    line-height: 1em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #404040;
+    font-weight: bold;
+}
+
+h4, h5, h6 {
+    margin-bottom: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, cite, code, del, dfn, em, img, q, s, samp, small, strike, strong, sub, sup, tt, var, dd, dl, dt, li, ol, ul, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+    border: 0 none;
+    font-family: inherit;
+    font-size: 100%;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+}
+
+td {
+    padding: 0 10px 4px 0;
+    vertical-align: middle;
+}
+
+td:last-child {
+    padding-right: 0;
+}
+
+a {
+    font-weight: bold;
+    text-decoration: none;
+    color: #0069D6;
+    font-weight: inherit;
+    line-height: inherit;
+    text-decoration: none;
+}
+
+#header h1 a {
+    line-height: 30px;
+}
+
+#header h1 a {
+    font-family: 'Lobster',cursive;
+    font-weight: normal;
+}
+
+
+#header a {
+    color: #EEEEEE;
+    text-decoration: none;
+}
+
+#header nav {
+    border-left: 1px solid #111111;
+    margin-top: 0;
+    float: right;
+}
+
+ul, ol {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: disc outside none;
+}
+
+#header nav li {
+    display: block;
+    float: left;
+}
+
+li {
+    color: gray;
+    line-height: 20px;
+}
+
+#header nav li.nav_item a {
+    border-left: 1px solid #444444;
+    border-right: 1px solid #111111;
+    display: block;
+    font-size: 16px;
+    height: 54px;
+    line-height: 54px;
+    padding: 0 25px;
+}
+
+#header nav li .sign_out, #header nav li .sign_in, #header nav li .sign_up {
+    color: #AAAAAA;
+    font-size: 0.9em;
+    font-weight: normal;
+    line-height: 55px;
+    padding-left: 20px;
+}
+
+#header nav li .sign_out, #header nav li .sign_in:hover, #header nav li .sign_up:hover {
+    color: #DDDDDD;
+}
+
+#header nav li.nav_item a {
+    border-left: 1px solid #444444;
+    border-right: 1px solid #111111;
+    display: block;
+    font-size: 16px;
+    height: 54px;
+    line-height: 54px;
+    padding: 0 25px;
+}
+
+#header nav li.nav_item a:hover {
+    background: url("lighten_hover.png") repeat scroll 0 0 transparent;
+    color: #FFFFFF;
+    line-height: 52px;
+}
+
+#header nav li.nav_item a:active {
+    background: url("darken_hover.png") repeat scroll 0 0 transparent;
+    line-height: 54px;
+}
+
+#container, #container #content {
+    overflow: visible;
+}
+
+label, input, select, textarea {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 13px;
+    font-weight: normal;
+    line-height: normal;
+}
+
+:-moz-placeholder {
+    color: #BFBFBF;
+}
+
+input, textarea {
+    -moz-transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset;
+}
+
+input:focus, textarea:focus {
+    border-color: rgba(82, 168, 236, 0.8);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(82, 168, 236, 0.6);
+    outline: 0 none;
+}
+
+input, textarea .uneditable-input {
+    border: 1px solid #CCCCCC;
+    border-radius: 3px 3px 3px 3px;
+    color: #404040;
+    display: inline-block;
+    font-size: 14px;
+    height: 20px;
+    line-height: 20px;
+    padding: 4px;
+    width: 210px;
+}
+
+button, input {
+    line-height: normal;
+}
+
+input, select, textarea {
+    font-size: 100%;
+    margin: 0;
+    vertical-align: baseline;
+}
+
+button:hover, input[type*="submit"]:hover, a.minimal:hover {
+    background-color: #D9D9D9;
+    box-shadow: 0 0 1px 1px #EAEAEA inset;
+    color: #222222;
+    cursor: pointer;
+}
+
+input[type*="submit"], a.minimal {
+    background-color: #E3E3E3;
+    border: 1px solid #BBBBBB;
+    border-radius: 3px 3px 3px 3px;
+    box-shadow: 0 0 1px 1px #F6F6F6 inset;
+    color: #333333;
+    font: bold 12px/1 "helvetica neue",helvetica,arial,sans-serif;
+    padding: 9px 10px 10px;
+    text-align: center;
+    text-shadow: 0 1px 0 #FFFFFF;
+}
+
+input[type="button"], input[type="reset"], input[type="submit"] {
+    height: auto;
+    width: auto;
+}
+
+input[type="button"], input[type="reset"], input[type="submit"] {
+    cursor: pointer;
+}
+
+input[type="checkbox"], input[type="radio"] {
+    border: medium none;
+    height: auto;
+    line-height: normal;
+    margin: 3px 0;
+    padding: 0;
+    width: auto;
+}
+
+td.actions {
+    padding-top: 10px;
+}
+
+#error_explanation, #flash_alert, #flash_error, #flash .error p, #run-error {
+    background: none repeat scroll 0 0 #FBE3E4;
+    border: 2px solid #FBC2C4;
+    color: #8B0000;
+    padding: 0.8em;
+}
+
+#flash > div, #error_explanation {
+    clear: both;
+    margin: 0 0 20px;
+    padding: 10px 20px;
+}
+
+#flash > div p, #error_explanation p {
+    margin: 0;
+    padding: 0;
+}
+
+#error_explanation h2, #flash_alert h2, #flash_error h2, #flash .error p h2, #run-error h2 {
+    display: none;
+}
+
+#error_explanation ul, #flash_alert ul, #flash_error ul, #flash .error p ul, #run-error ul {
+    list-style: none outside none;
+}
+
+#error_explanation ul li, #flash_alert ul li, #flash_error ul li, #flash .error p ul li, #run-error ul li {
+    color: #8A1F11;
+}
+
+#flash_info {
+    background-color: #CCFFCC;
+    border: 2px solid #66CC66;
+    color: green;
+}
+
+#flash_notice {
+    background-color: #FFFACD;
+    border: 2px solid #FFD700;
+    color: #B8860B;
+}
+
+#notices {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 102;
+}
+
+#notices .notice {
+    background-color: #FFFACD;
+    border-bottom: 2px solid #FFD700;
+    color: #B8860B;
+    float: left;
+    padding: 10px 0;
+    position: relative;
+    width: 100%;
+}
+
+#notices .notice h1, #notices .notice h2, #notices .notice p, #notices .notice h3 {
+    margin: 0;
+}
+
+body .two_col, body .one_col {
+    clear: both;
+    margin: 0 auto;
+    overflow: visible;
+    position: relative;
+    width: 988px;
+}
+
+body .two_col, body .one_col {
+    clear: both;
+}
+
+body .two_col > div:first-child {
+    display: inline;
+    float: left;
+    margin-right: 20px;
+    width: 702px;
+}
+
+body .two_col > div:last-child {
+    display: inline;
+    float: right;
+    margin-right: 0;
+    width: 266px;
+}
+
+#content #sidebar > div {
+    float: left;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+h3.divider {
+    border-bottom: 1px solid #DDDDDD;
+    padding: 0 0 5px;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+p {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 20px;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+ul.sections {
+  margin-top: 10px;
+}
+
+li.section {
+    border-top: 1px solid #BFBFBF;
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+    float: left;
+    width: 100%;
+}
+
+.item {
+    padding: 15px;
+    position: relative;
+    border: 0 none;
+    font-family: inherit;
+    font-size: 100%;
+    font-style: normal;
+    margin:0;
+}
+
+.item_progress {
+  padding: 15px 130px 30px 15px;
+}
+
+.item_pause {
+  
+}
+
+.item_testjob {
+  background-color: #D5E9F6
+}
+
+.message {
+  
+}
+
+.section h3 {
+    color: #2F73C5;
+    margin: 0;
+    font-size: 1.3em;
+    float: left;
+}
+
+.section h4 {
+    color: #2F73C5;
+    margin: 0;
+    float: left;
+}
+
+
+.section div.status {
+    color: #999999;
+    line-height: 1em;
+    margin: 0;
+    position: absolute;
+    right: 15px;
+    top: 16px;
+}
+
+.section div.status small.active {
+    background-color: #7FBF4D;
+}
+
+.section div.status small.inactive {
+    background-color: #DDD;
+}
+
+.section div.status small.normal {
+    background-color: #2F73C5;
+}
+
+.section div.status small.size {
+  width: 37px;
+}
+
+.section div.status small {
+    border-radius: 3px 3px 3px 3px;
+    color: #FFFFFF;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: bold;
+    margin-right: 8px;
+    padding: 3px 5px 4px;
+}
+
+.section div.status small a {
+   color: white;
+}
+
+
+.section div.status small a:hover {
+   color: #00438A;
+}
+
+.section h4.pending, .section h4.stop {
+  color: #BFBFBF;
+}
+
+.section h4.pass {
+  color: #669900;
+}
+
+.section h4.fail {
+  color: red;
+}
+
+.section h4.running {
+  color: #DD9300;
+}
+
+.section div.bar_container {
+  width: 200px;
+  float: right;
+  margin: -5px -60px 10px 10px;
+}
+
+.toparea, .envarea {
+  margin-bottom: 10px;
+  float: right;
+}
+
+.testscope_form {
+  float: left; 
+  width: 800px;
+}
+
+div.testscope_form input[type="submit"] {
+  padding: 1px 5px 1px 5px;
+}
+
+.message {
+  display:none; 
+  margin-left: 15px;
+  background-color: #D0D0D0;
+  padding: 5px 0 0 5px;
+}

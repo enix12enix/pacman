@@ -1,0 +1,51 @@
+<%= form_for @testscript do |f| %>
+      <%= hidden_field_tag :type, "test_script" %>
+	  <fieldset>
+	  	<table>
+	  	  <tbody>
+	  	  	<tr>
+	  	  	  <td><%= f.label :name %></td>
+	  	  	  <td><%= f.text_field :name, :class => "text ui-widget-content ui-corner-all" %></td>
+	  	  	</tr>
+	  	  	<tr>
+	  	  	  <td><%= f.label :path %></td>
+	  	  	  <td><%= f.text_field :path, :class => "text ui-widget-content ui-corner-all" %></td>
+	  	    </tr>
+	  	    <tr>
+	  	  	  <td><%= f.label :devtest %></td>
+	  	  	  <td><%= f.text_field :devtest, :class => "text ui-widget-content ui-corner-all" %></td>
+	  	    </tr>
+	  	    <tr>
+	  	  	  <td><%= f.label :active %></td>
+	  	  	  <td><%= f.check_box :active, :class => "text ui-widget-content ui-corner-all" %></td>
+	  	    </tr>
+	  	    <tr>
+	  	  	  <td><%= f.label :multiplethread %></td>
+	  	  	  <td><%= f.check_box :multiplethread, :class => "text ui-widget-content ui-corner-all" %></td>
+	  	    </tr>
+	  	    <tr>
+	  	  	  <td><%= f.label :platform%></td>
+	  	  	  <td><%= f.collection_select :platform, Platform.all, :id, :name, :class => "text ui-widget-content ui-corner-all"%></td>
+	  	    </tr>
+	  	    <tr>
+	  	      <td><%= label_tag "Locale"%></td>
+	  	      <td>
+	  	        <%- Locale.all.each do |locale| -%>
+	              <%= label_tag locale.sitecode %>
+	              <%= check_box_tag "test_script[locale_ids][]", locale.id, @testscript.locales.include?(locale) %>
+	            <%- end -%>
+	  	      </td>
+	  	    </tr>
+	  	    <tr>
+	  	      <td><%= label_tag "Account Type"%></td>
+	  	      <td>
+	  	        <%- Accounttype.all.each do |acctype| -%>
+	              <%= label_tag acctype.name %>
+	              <%= check_box_tag "test_script[accounttype_ids][]", acctype.id, @testscript.accounttypes.include?(acctype) %>
+	            <%- end -%>
+	  	      </td>
+	  	    </tr>
+	  	  </tbody>	
+	  	</table>  
+	 </fieldset>
+<% end %>
